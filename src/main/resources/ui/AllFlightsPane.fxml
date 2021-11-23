@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <right>
+      <TableView fx:id="dataTable" prefHeight="559.0" prefWidth="550.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <TextField prefHeight="56.0" prefWidth="714.0" text="All Flights Window" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets left="300.0" />
+         </padding>
+      </TextField>
+   </top>
+   <bottom>
+      <Label prefHeight="45.0" prefWidth="714.0" text="\@author Dinmukhamed Tursynbay" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+   </bottom>
+   <left>
+      <VBox prefHeight="523.0" prefWidth="164.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="searchTextField" prefHeight="41.0" prefWidth="164.0" promptText="From">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin></TextField>
+            <Button mnemonicParsing="false" onAction="#searchCityFrom" text="Search">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Button>
+            <TextArea editable="false" minHeight="315.0" prefHeight="315.0" prefWidth="164.0" text="There can be your advertisement. Contact me: https://www.linkedin.com/in/dinmukhamed-tursynbay-9862a01b9/" wrapText="true">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </TextArea>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

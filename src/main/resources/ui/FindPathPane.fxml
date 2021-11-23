@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <TextField prefHeight="96.0" prefWidth="503.0" text="Airport Flights Manager" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Italic" size="36.0" />
+         </font>
+      </TextField>
+   </top>
+   <bottom>
+      <TextField text="\@author Dinmukhamed Tursynbay" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <VBox prefHeight="278.0" prefWidth="285.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField text="Find best path to city you want" />
+            <TextField fx:id="startCity" prefHeight="39.0" prefWidth="520.0" promptText="From" />
+            <TextField fx:id="finishCity" prefHeight="39.0" prefWidth="277.0" promptText="To" />
+            <TextField fx:id="startDate" prefHeight="38.0" prefWidth="281.0" promptText="Departure date in YYYY-MM-DD format" />
+            <Button fx:id="searchFlight" mnemonicParsing="false" onAction="#searchFlightPressed" text="Search for Fastest Flight">
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin></Button>
+            <TextField fx:id="resultPath" promptText="Here will be the result date" />
+         </children>
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="278.0" prefWidth="298.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField text="Modify Flights Table" />
+            <TextField fx:id="departureCity" promptText="departure city">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="arrivalCity" promptText="arrival city">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="departureDate" promptText="departure date">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="arrivalDate" promptText="arrival date">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#addFlightPressed" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#removeFlightPressed" text="Remove" />
+              </items>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </ToolBar>
+            <Button mnemonicParsing="false" onAction="#showFlightsPressed" prefHeight="26.0" prefWidth="201.0" text="Show Flights Table">
+               <VBox.margin>
+                  <Insets left="40.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
